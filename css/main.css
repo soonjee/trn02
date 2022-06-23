@@ -1,0 +1,727 @@
+.Wrap {}
+
+.container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.topBanner .inner {
+    position: relative;
+}
+
+.topBanner {
+    padding: 30px 0;
+    background: #f1f1f1;
+}
+
+.topBanner h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.topBanner p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.topBanner a {
+    margin: 0 0 0 10px;
+    padding: 3px 15px 5px 15px;
+    background: #333;
+    color: #fff;
+}
+
+.topBanner i {
+    position: absolute;
+    inset: 0 0 auto auto;
+    font-size: 21px;
+    padding: 5px;
+    background: #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+
+#header {
+    line-height: 100px;
+    border-bottom: 1px solid #ddd;
+
+}
+
+#header .container {
+    justify-content: space-between;
+}
+
+#header nav>ul {
+    display: flex;
+}
+
+#header nav>ul>li>a {
+    padding: 0 15px;
+    font-size: 17px;
+}
+
+#header nav>ul>li~li::before {
+    display: inline-block;
+    content: "";
+    width: 1px;
+    height: 14px;
+    background: #ddd;
+
+}
+
+#header a {
+    display: inline-block;
+}
+
+#searchForm input[type="text"] {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 5px 0;
+    color: #f00;
+}
+
+#searchForm input[type="text"]::placeholder {
+    color: #f00;
+}
+
+#searchForm input[type="text"]:focus::placeholder {
+    opacity: 0;
+}
+
+#searchForm button {
+    background: transparent;
+    /*  background: transparent; 투명해짐 */
+    outline: none;
+    border: none;
+    font-size: 21px;
+}
+
+.mainVisual {
+    position: relative;
+}
+
+.mainVisual .mainSlider figure {
+    position: relative;
+    height: 600px;
+}
+
+.mainVisual .mainSlider .itm01 {
+    background: url(../img/mainvisual01.jpg)no-repeat center center/cover;
+}
+
+.mainVisual .mainSlider .itm02 {
+    background: url(../img/mainvisual02.jpg)no-repeat center center/cover;
+}
+
+.mainVisual .mainSlider .itm03 {
+    background: url(../img/mainvisual03.jpg)no-repeat center center/cover;
+}
+
+.mainVisual .mainSlider .inner {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+}
+
+.mainVisual .mainSlider .inner h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.mainVisual .mainSlider .inner p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+}
+
+.mainVisual .mainSlider .inner a {
+    display: inline-block;
+    padding: 5px 20px;
+    background: #333;
+}
+
+
+.mainVisual .mainSlider figure h2 {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.mainVisual .mainSlider figure.on h2 {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.mainVisual .mainSlider figure p {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.mainVisual .mainSlider figure.on p {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s 0.5s;
+}
+
+.mainVisual .mainSlider figure a {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.mainVisual .mainSlider figure.on a {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s 1s;
+}
+
+.mainVisual .mainSlider .slick-dots {
+    position: absolute;
+    inset: auto auto 100px 50%;
+    transform: translateX(-50%);
+}
+
+.mainVisual .mainSlider .slick-dots li {
+    display: inline-block;
+}
+
+.mainVisual .mainSlider .slick-dots button {
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    width: 22px;
+    height: 0px;
+}
+
+.mainVisual .mainSlider .slick-dots li.slick-active button {
+    background: #f00;
+    color: #fff;
+}
+
+.slideNum {
+    position: absolute;
+    inset: 50px auto auto 50%;
+    margin: 0 0 0 600px;
+    transform: translateX(-100%);
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+    font-size: 41px;
+}
+
+.mainArrow i {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 100px;
+}
+
+.mainArrow i.on {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.mainArrow i:nth-child(1) {
+    margin: 0 0 0 -700px;
+}
+
+.mainArrow i:nth-child(2) {
+    margin: 0 0 0 700px;
+}
+
+
+
+.mainContent {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.mainContent h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.mainContent p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+}
+
+.mainContent .container {
+    display: flex;
+    gap: 30px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.mainContent .container figure {
+    flex: 1;
+}
+
+.mainContent .container img {
+    max-width: 100%;
+    margin: 0 0 10px 0;
+}
+
+.mainContent .containert strong {
+    display: block;
+    margin: 0 0 10px 0;
+    font-size: 15px;
+}
+
+.mainContent .container a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    font-size: 15px;
+}
+
+.mainContent2 {
+    padding: 100px 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    background: #f9f9f9;
+}
+
+.mainContent2 h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.mainContent2 p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+}
+
+.mainContent2 .container {
+    gap: 30px;
+}
+
+.mainContent2 .container figure {
+    flex: 1;
+}
+
+.mainContent2 .container img {
+    max-width: 100%;
+    margin: 0 0 10px 0;
+}
+
+.mainContent2 .container strong {
+    display: block;
+    margin: 0 0 10px 0;
+    font-size: 15px;
+}
+
+.mainContent2 .container a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    font-size: 15px;
+}
+
+
+
+
+.mainContent3 {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.mainContent3 h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.mainContent3 p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+}
+
+.mainContent3 .container {
+    gap: 30px;
+}
+
+.mainContent3 .container figure {
+    flex: 1;
+}
+
+.mainContent3 .container img {
+    max-width: 100%;
+    margin: 0 0 10px 0;
+}
+
+.mainContent3 .container strong {
+    display: block;
+    margin: 0 0 10px 0;
+    font-size: 15px;
+}
+
+.mainContent3 .container a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    font-size: 15px;
+}
+
+
+.mainContent3 figure .box {
+    overflow: hidden;
+    margin: 0 0 10px 0;
+    transition: border-radius 0.5s;
+}
+
+.mainContent3 figure:hover .box {
+    border-radius: 70%;
+}
+
+.mainContent3 figure img {
+    transition: transform 0.5s;
+}
+
+.mainContent3 figure:hover img {
+    transform: scale(1.3);
+}
+
+
+
+.fixedBg {
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(../img/mainvisual01.jpg) no-repeat fixed center center/cover;
+    filter: grayscale(1);
+}
+
+.fixedBg h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 200;
+}
+
+.fixedBg p {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 200;
+}
+
+.fixedBg i {
+    padding: 5px;
+    background: #333;
+    vertical-align: -10%;
+    border-radius: 50%;
+}
+
+
+
+.fixedBg2 {
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(../img/mainvisual01.jpg) no-repeat fixed center center/cover;
+}
+
+.fixedBg2 h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 200;
+}
+
+.fixedBg2 p {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 200;
+}
+
+.fixedBg2 i {
+    padding: 5px;
+    background: #333;
+    vertical-align: -10%;
+    border-radius: 50%;
+}
+
+.service {
+    padding: 50px 0;
+}
+
+.service .container {
+    gap: 30px;
+}
+
+
+.service .container>div {
+    position: relative;
+    padding-bottom: 56.25%;
+    flex: 1;
+}
+
+.service .container .case {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+
+.service .container iframe {
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.service .container .root_daum_roughmap {
+    position: absolute;
+    inset: 0 0 0 0;
+    width: 100%;
+}
+
+.service .container .root_daum_roughmap .wrap_map {
+    height: 100%;
+}
+
+
+
+.utb {
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+    filter: grayscale(1);
+}
+
+.utb h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.utb p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.utb i {
+    padding: 5px;
+    background: #333;
+    vertical-align: -20%;
+    border-radius: 50%;
+}
+
+.scrollMe {
+    padding: 200px 0;
+}
+
+.scrollMe .container {
+    gap: 70px;
+}
+
+.scrollMe .container figure {
+    flex: 1;
+}
+
+
+
+
+.product {
+    padding: 100px 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.product h2 {
+    margin: 0 0 10px 0;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.product h2::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 50px;
+    background: #f00;
+    margin: 10px auto;
+}
+
+.product {
+    position: relative;
+}
+
+.product p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+}
+
+.product .productSlider figure {
+    padding: 0 15px;
+    font-size: 13px;
+}
+
+.product .productSlider img {
+    width: 100%;
+}
+
+.product .productSlider figure.slick-center img {
+    transform: scale(1.2);
+    transition: transform 0.5s;
+}
+
+
+.product .productSlider .inbox {
+    margin: 0 0 10px 0;
+    overflow: hidden;
+}
+
+/* strong은 인라인태그라 마진이 안 먹기 때문에 block처리 */
+.product .productSlider strong {
+    position: relative;
+    top: -15px;
+    display: block;
+    margin: 0 0 10px 0;
+}
+
+.product .productSlider a {
+    display: inline-block;
+    padding: 5px 15px;
+    background: #333;
+    color: #fff;
+    margin: 0 0 10px 0;
+}
+
+.product .productSlider .slick-dots {
+    padding: 20px 0 0 0;
+}
+
+.product .productSlider .slick-dots li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.product .productSlider .slick-dots li button {
+    border: none;
+    outline: none;
+    padding: 0;
+    background: rgb(0, 150, 115);
+    color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+}
+
+.product .productSlider .slick-dots .slick-active button {
+    background: #333;
+}
+
+
+
+.product .productArrows i {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 10px;
+}
+
+.product .productArrows i:nth-child(1) {
+    margin: 0 0 0 -500px;
+}
+
+.product .productArrows i:nth-child(2) {
+    margin: 0 0 0 500px;
+}
+
+.serviceTab {
+    padding: 100px 0;
+    background: #f1f1f1;
+}
+
+.serviceTab .container {
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.serviceTab .container>div {
+    width: 50%;
+}
+
+.serviceTab .tab_content>div {
+    display: none;
+}
+
+.serviceTab .tab_content>div.on {
+    display: block;
+}
+
+.serviceTab .tab_menu {
+    display: flex;
+}
+
+.serviceTab .tab_menu li {
+    flex: 1;
+    background: #ddd;
+    color: #333;
+}
+
+.serviceTab .tab_menu li.on {
+    background: #f00;
+    color: #fff;
+}
+
+.serviceTab .tab_menu li~li {
+    border-left: 1px solid #fff;
+}
+
+.serviceTab .tab_menu li a {
+    display: block;
+    padding: 10px 15px;
+}
+
+.tab_content .notice a {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab_content .notice strong {
+    width: 75%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+.toTop {
+    display: none;
+    position: fixed;
+    inset: auto 50px 50px auto;
+}
+
+.toTop i {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}

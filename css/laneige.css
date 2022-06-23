@@ -1,0 +1,101 @@
+#header {
+    line-height: 50px;
+    border-bottom: 1px solid rgb(218, 235, 244);
+}
+
+#header .container {
+    display: flex;
+    margin: 0 auto;
+    width: 1200px;
+    justify-content: space-between;
+}
+
+#header .container nav>ul {
+    display: flex;
+}
+
+#header nav>ul>li>a {
+    padding: 0 15px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.container img {
+    width: 100px;
+}
+
+
+
+.main_visual {
+    position: relative;
+}
+
+.main_visual .main_slider figure {
+    position: relative;
+    height: 500px;
+}
+
+.main_visual .main_slider .item01 {
+    background: url(../img/laneigeslider01.png) no-repeat center center/cover;
+}
+
+.main_visual .main_slider .item02 {
+    background: url(../img/laneigeslider02.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_slider .item03 {
+    background: url(../img/laneigeslider03.jpg) no-repeat center center/cover;
+}
+
+.main_visual .main_slider .inner {
+    position: absolute;
+    inset: 50% auto auto 40%;
+    transform: translate(-50%, -50%);
+}
+
+.main_visual .main_slider .inner h2 {
+    margin: 15px 0 30px 0;
+    font-size: 39px;
+    font-weight: 400;
+}
+
+.main_visual .main_slider .inner p {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+.main_visual .main_slider .inner a {
+    font-size: 11px;
+    font-weight: 400;
+    padding: 1px 5px;
+    background: rgb(85, 155, 224);
+    color: #fff;
+}
+
+
+
+.main_visual .sliderArrow i {
+    position: absolute;
+    inset: 80% auto auto 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+    font-size: 21px;
+}
+
+.sliderArrow i:nth-child(1) {
+    margin: 0 0 0 -100px;
+}
+
+.sliderArrow i:nth-child(2) {
+    margin: 0 0 0 100px;
+}
+
+
+
+#footer {
+    width: 1200px;
+    padding: 80px 50px;
+    text-align: center;
+    background: #f7f7f7;
+}
