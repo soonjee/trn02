@@ -64,13 +64,12 @@ $(function () {
         $('.productSlider').slick('slickNext')
     });
 
-
     $('.tab_menu li').on('click', function (event) {
         event.preventDefault();
         //console.log($(this), $(this).index(), event.target, event.currentTarget);
         $('.tab_content>div').removeClass('on');
         $(this).addClass('on');
-        var idx = $(this).index(); // 0, 1, 2
+        var idx = $(this).index(); // 0,1,2
         $('.tab_content>div').removeClass('on');
         $('.tab_content>div').eq(idx).addClass('on');
     });
@@ -79,7 +78,7 @@ $(function () {
 
     $('.tab_content .notice li').on('click', function (event) {
         event.preventDefault();
-        var idx = $(this).index();// 0, 1, 2
+        var idx = $(this).index(); // 0,1,2
         $('.right_content>li').removeClass('on');
         $('.right_content>li').eq(idx).addClass('on');
         console.log(ux)
@@ -97,11 +96,14 @@ $(function () {
         } else {
             $('.toTop').fadeOut(1000)
         }
-    });
+    })
 
 
-
-
+    $('#fl').on('change', function () {
+        console.log($(this), $(this).val())
+        var lnk = $(this).val();
+        lnk && window.open(lnk);
+    })
 
 
 

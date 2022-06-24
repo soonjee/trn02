@@ -11,13 +11,17 @@
     margin: 0 auto;
 }
 
-.topBanner .inner {
-    position: relative;
-}
-
 .topBanner {
+    position: sticky;
+    inset: 0 auto auto 0;
+    width: 100%;
     padding: 30px 0;
     background: #f1f1f1;
+    z-index: 999
+}
+
+.topBanner .inner {
+    position: relative;
 }
 
 .topBanner h2 {
@@ -47,7 +51,6 @@
     border-radius: 3px;
     cursor: pointer;
 }
-
 
 
 #header {
@@ -261,10 +264,7 @@
 }
 
 .mainContent .container {
-    display: flex;
     gap: 30px;
-    width: 1200px;
-    margin: 0 auto;
 }
 
 .mainContent .container figure {
@@ -276,7 +276,7 @@
     margin: 0 0 10px 0;
 }
 
-.mainContent .containert strong {
+.mainContent .container strong {
     display: block;
     margin: 0 0 10px 0;
     font-size: 15px;
@@ -284,7 +284,7 @@
 
 .mainContent .container a {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 5px 15px;
     background: #333;
     color: #fff;
     font-size: 15px;
@@ -293,7 +293,6 @@
 .mainContent2 {
     padding: 100px 0;
     text-align: center;
-    border-top: 1px solid #ddd;
     background: #f9f9f9;
 }
 
@@ -336,9 +335,6 @@
     color: #fff;
     font-size: 15px;
 }
-
-
-
 
 .mainContent3 {
     padding: 100px 0;
@@ -540,6 +536,7 @@
 
 
 .product {
+    position: relative;
     padding: 100px 0;
     text-align: center;
     border-top: 1px solid #ddd;
@@ -554,14 +551,10 @@
 .product h2::after {
     content: "";
     display: block;
-    width: 1px;
+    width: 2px;
     height: 50px;
-    background: #f00;
+    background: rgb(0, 150, 115);
     margin: 10px auto;
-}
-
-.product {
-    position: relative;
 }
 
 .product p {
@@ -572,7 +565,7 @@
 }
 
 .product .productSlider figure {
-    padding: 0 15px;
+    padding: 40px 15px 0 15px;
     font-size: 13px;
 }
 
@@ -581,14 +574,14 @@
 }
 
 .product .productSlider figure.slick-center img {
-    transform: scale(1.2);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    transform: scale(1.3);
     transition: transform 0.5s;
 }
 
 
 .product .productSlider .inbox {
     margin: 0 0 10px 0;
-    overflow: hidden;
 }
 
 /* strong은 인라인태그라 마진이 안 먹기 때문에 block처리 */
@@ -625,10 +618,10 @@
     border-radius: 50%;
     width: 20px;
     height: 20px;
-    font-size: 11px;
+    font-size: 12px;
 }
 
-.product .productSlider .slick-dots .slick-active button {
+.product .productSlider .slick-dots li.slick-active button {
     background: #333;
 }
 
@@ -636,20 +629,20 @@
 
 .product .productArrows i {
     position: absolute;
-    inset: 50% auto auto 50%;
+    inset: 55% auto auto 50%;
     transform: translate(-50%, -50%);
-    font-size: 40px;
+    font-size: 55px;
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 .product .productArrows i:nth-child(1) {
-    margin: 0 0 0 -500px;
+    margin: 0 0 0 -600px;
 }
 
 .product .productArrows i:nth-child(2) {
-    margin: 0 0 0 500px;
+    margin: 0 0 0 600px;
 }
 
 .serviceTab {
@@ -659,11 +652,10 @@
 
 .serviceTab .container {
     gap: 30px;
-    flex-wrap: wrap;
 }
 
 .serviceTab .container>div {
-    width: 50%;
+    flex: 1;
 }
 
 .serviceTab .tab_content>div {
@@ -685,7 +677,7 @@
 }
 
 .serviceTab .tab_menu li.on {
-    background: #f00;
+    background: rgb(0, 150, 115);
     color: #fff;
 }
 
@@ -701,15 +693,29 @@
 .tab_content .notice a {
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid #999;
 }
 
 .tab_content .notice strong {
-    width: 75%;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    min-width: 0;
+    width: 450px;
+    padding: 10px 5px;
 }
 
+.tab_content .notice span {
+    padding: 10px 5px;
+}
+
+.right_content li {
+    display: none;
+}
+
+.right_content li.on {
+    display: block;
+}
 
 .toTop {
     display: none;
@@ -724,4 +730,60 @@
     font-size: 30px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+
+#footer {
+    background: #333;
+    color: #fff;
+    line-height: 80px;
+    font-size: 15px;
+}
+
+#footer .top dt,
+#footer .top dd {
+    display: inline-block;
+}
+
+#footer .top {
+    border-bottom: 1px solid #666;
+}
+
+#footer .top dt::before,
+#footer .top dd~dd::before {
+    content: "";
+    display: inline-block;
+    margin: 0 15px;
+    width: 1px;
+    height: 13px;
+    background: #ddd;
+}
+
+
+#footer .top i {
+    font-size: 33px;
+}
+
+#footer .container {
+    justify-content: space-between;
+}
+
+/* address가 누워있을 경우, 
+#footer .bottom adrress {
+ font-style : none; } */
+
+
+#footer .bottom select {
+    font-size: 12px;
+    /*  text-transform: uppercase; 대문자로 바꿔줌 */
+    text-transform: uppercase;
+    background: transparent;
+    color: #ddd;
+    padding: 0 15px;
+    border: 1px solid #666;
+}
+
+#footer .bottom option {
+    color: #fff;
+    background: #333;
 }
